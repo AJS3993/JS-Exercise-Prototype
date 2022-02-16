@@ -102,8 +102,6 @@ Car.prototype.drive = function (distance) {
 */
 function Baby(props) { 
  Person.call(this, props);
-this.name=props.name;
- this.age=props.age;
  this.favoriteToy = props.favoriteToy
 }
 
@@ -118,10 +116,10 @@ console.log(testBaby.name)
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. "this" in the global scope references the window object.
+  2. If used in a function that is inside an object, "this" references the object that the function is inside.
+  3. If used in a constructor function, "this" refers to the specific object that the constructor is creating.
+  4. what "this" refers to in a constructor object can be ovreridden by using .call and .apply.
 */
 
 
