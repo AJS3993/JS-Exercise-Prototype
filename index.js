@@ -100,9 +100,10 @@ Car.prototype.drive = function (distance) {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby(props) { 
- Person.call(this, props);
- this.favoriteToy = props.favoriteToy
+function Baby(name,age,favoriteToy) { 
+ this.name=name;
+ this.age=age;
+ this.favoriteToy = favoriteToy;
 }
 
 Baby.prototype = Object.create(Person.prototype);
@@ -111,8 +112,8 @@ Baby.prototype.play = function() {
   return `Playing with ${this.favoriteToy}`
 }
 
-const testBaby = new Baby({name: 'test', age: 1, favoriteToy:'train'})
-console.log(testBaby.name)
+const testBaby = new Baby('Lucy',5,'trains')
+console.log(testBaby.age)
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
